@@ -1,0 +1,12 @@
+# .air.toml
+root = "."
+tmp_dir = "tmp"
+
+[build]
+  bin = "tmp/main.exe"          # Path to the compiled binary
+  cmd = "go build -o tmp/main.exe main.go"  # Command to build your application
+  include = ["*.go"]            # Files to watch for changes
+  exclude = ["tmp/*"]           # Files to exclude from watching
+
+[log]
+  time = true                   # Log timestamps
